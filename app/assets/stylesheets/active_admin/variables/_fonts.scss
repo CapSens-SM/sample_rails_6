@@ -1,14 +1,2 @@
-/// The default sans-serif font
-$am-font-sans: 'RobotoDraft', sans-serif !default;
-
-/// The weight of bold type
-$am-font-weight-bold: 700;
-
-/// The weight of semi-bold type
-$am-font-weight-semi-bold: 600;
-
-/// The weight of medium type
-$am-font-weight-medium: 500;
-
-/// The weight of regular type
-$am-font-weight-regular: 400;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+$am-font-sans: 'Raleway', sans-serif;
