@@ -28,6 +28,8 @@ gem 'activeadmin', '~> 2.7'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'enumerize', '~> 2.3', '>= 2.3.1'
 gem 'draper', '~> 4.0', '>= 4.0.1'
+gem "active_material", github: "vigetlabs/active_material"
+
 
 
 group :development, :test do
