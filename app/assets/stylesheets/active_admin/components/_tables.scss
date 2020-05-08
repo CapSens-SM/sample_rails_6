@@ -1,0 +1,15 @@
+$table-striping-color: $am-theme-paper;
+
+.index_content .index_as_table table {
+  tr.odd  { 
+    background: $table-striping-color; 
+  }
+  
+  tr.even { 
+    background: darken($table-striping-color, 5%); 
+  }
+
+  .table_actions {
+    background: unset;
+  }
+}
