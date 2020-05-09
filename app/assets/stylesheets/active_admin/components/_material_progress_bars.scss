@@ -1,0 +1,51 @@
+@import 'active_admin/variables/colors';
+
+$customers_states_colors: (
+  new: #BBC6C3, 
+  contacted: #70C0C6, 
+  negociating: #9DEA4F, 
+  signed: #329932,  
+  terminated: #FF320E
+);
+
+$progress-bar-bg: #acece6;
+$state-text-color: #707675;
+$progress-bar-border-color: $state-text-color;
+
+
+.progress-wrapper {
+  .progress {
+    position: relative;
+    height: 10px;
+    display: block;
+    width: 100%;
+    min-width: 100px;
+    background-color: $progress-bar-bg;
+    border-radius: 2px;
+    background-clip: padding-box;
+    margin: 0.15rem 0 1rem 0;
+    overflow: hidden;
+  
+    .bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transition: width 1s expandWidth;    
+    }
+  }
+
+  @each $state, $color in $customers_states_colors {
+    &.#{$state} {
+      color: $state-text-color;
+
+      .progress {
+        border: 0.5px solid $progress-bar-border-color;
+        background-color: transparent;
+  
+        .bar {
+          background: $color;
+        }
+      }
+    }
+  }
+}

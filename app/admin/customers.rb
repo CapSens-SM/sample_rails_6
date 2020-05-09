@@ -1,5 +1,6 @@
 ActiveAdmin.register Customer do
   decorate_with CustomerDecorator
+  config.per_page = 12
 
   index do
     selectable_column
@@ -11,7 +12,7 @@ ActiveAdmin.register Customer do
     column :language
     column :membership_amount_in_dollars, sortable: :membership_amount
     column :state do |customer|
-      status_tag customer.state
+      render partial: 'admin/customers/material_progress_bar', locals: { customer: customer }
     end
     column :created_at
     column :updated_at
