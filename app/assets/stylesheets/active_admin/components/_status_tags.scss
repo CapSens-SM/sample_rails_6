@@ -1,0 +1,15 @@
+$customers_states_colors: (
+  new: #BBC6C3, 
+  contacted: #70C0C6, 
+  negociating: #9DEA4F, 
+  signed: #329932,  
+  terminated: #FF320E
+); 
+
+.status_tag {
+  @each $state, $color in $customers_states_colors {
+    &.#{$state} {
+      background: $color;
+    }
+  }
+}

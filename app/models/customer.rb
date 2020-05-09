@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
   extend Enumerize
-  USER_STATE = %i[ new contacted negociating signed ]
+  USER_STATE = %i[ new contacted negociating signed terminated ]
   enumerize :state, in: USER_STATE, default: :new
 
 end
