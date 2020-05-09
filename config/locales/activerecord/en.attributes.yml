@@ -1,0 +1,5 @@
+en:
+  activerecord:
+    attributes:
+      customer:
+        membership_amount_in_dollars: Membership ($)
